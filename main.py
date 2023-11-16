@@ -7,7 +7,7 @@ from theme import CustomTheme
 
 
 def response(message, history):
-    if not os.path.exists("store"):
+    if not os.path.exists("storage"):
         # load the documents and create the index
         documents = SimpleDirectoryReader("eigene").load_data()
         index = VectorStoreIndex.from_documents(documents)
